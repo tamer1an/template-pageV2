@@ -5,7 +5,7 @@
 	define ('PORT',$_SERVER['SERVER_PORT']  );
 	define ('RQ_URL',$_SERVER['REQUEST_URI']);
 
-	define('SYS_URL','http://'.NAME.'/');
+	define('SYS_URL','http://'.NAME.'/template-pageV2/');
 
 	// "IMG"
 	define('IMG',SYS_URL.'images/');
@@ -117,15 +117,16 @@
 				<ul class="main_form mt3 fs12">                                                                                             
 					<li class="">	 
 						<label class="f cl" for="name">Contact name*:</label> 
+						<!-- check border style from source input psd -->
 						<input id="name" class="f cl" required="required" autofocus="true" placeholder="Required" title="Required" name="name" type="text"/>
 					</li>
 					<li class="">
 						<label class="f cl" for="email">Contact email address*:</label> 
-						<input id="email" class="f cl" required="required" placeholder="Required" title="Required" type="email" name="email"/>      
+						<input id="email" class="f cl w235" required="required" placeholder="Required" title="Required" type="email" name="email"/>      
 					</li>
 					<li class="">
 						<label class="f cl" title="+55 (555) 555-55-55" for="phone">Contact phone number:</label> 
-						<input id="phone" class="f cl" placeholder="+55 (555) 555-55-55" name="phone" title="+55 (555) 555-55-55"  type="text" />      
+						<input id="phone" class="f cl w235" placeholder="+55 (555) 555-55-55" name="phone" title="+55 (555) 555-55-55"  type="text" />      
 					</li>
 					<li class="f cl">
 						<div class="">
