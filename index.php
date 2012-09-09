@@ -80,22 +80,22 @@
 </head>
 
 <body class="fc"> <!--  onload="init()" -->
-  <section id="page" class="w540 block f ma ffarial">
-	<header class="mb17 mt17">
+  <section id="page" class="w540 block f ma ffarial bg-size pb155">
+	<header class="mb17 mt17 f">
 		<div id="logo" class="f block w100pc h55 mb35"> </div>
-		<nav>
+		<nav id="main_nav">
 		  <a href="/menu1/">Menu 1</a> 
 		  <a href="/menu2/">Menu 2</a> 
 		  <a href="/menu3/">Menu 3</a> 
 		</nav> 
 	</header>
   
-	<section>
+	<section class="wwbr cl f">
 		<header class="mb17 fc_h1 fs24"> About AKQA </header>
 		<h1 class="mb17 fs18"> What We Do </h1>
-		<p class="mb17 w355 fs12"> <strong>AKQA’s</strong> e-commerce solutions are inspired by the innovative application of technology. We integrate with CRM systems and databases to provide a seamless customer experience. <strong>AKQA</strong> manages technology projects using structured development processes and our QA team ensures that the final implementation is delivered to the highest quality standards. We also provide clients with a high-quality, ISO 9000-certified, managed hosting service. </p>
+		<p class="mb17 w375 fs12"> <strong>AKQA’s</strong> e-commerce solutions are inspired by the innovative application of technology. We integrate with CRM systems and databases to provide a seamless customer experience. <strong>AKQA</strong> manages technology projects using structured development processes and our QA team ensures that the final implementation is delivered to the highest quality standards. We also provide clients with a high-quality, ISO 9000-certified, managed hosting service. </p>
 		<h3 class="mb17 fs14 fc_h3 fwb"> Our focus </h3>
-		<ul class="mb22"> 
+		<ul class="ml12 mb22 dotList fs12"> 
 			<li> Interactive</li>
 			<li> Mobile 	</li>
 			<li> Technology </li>
@@ -103,13 +103,13 @@
 		<a href="#" class="fftimes"> Click here to download a PDF of our recent work </a> 
 		
 		<h1 class="mt22 mb15 fs18"> News </h1>
-		<div class="mb15 fc_h1 fs12 fwb">  Show / Hide news item </div>
-		<p class="mb15 w355 fs12"> <strong> AKQA’s </strong> site for NBA superstar Lebron Spaß <a href="www.lebron23-23.com" target="_blank"> www.lebron23-23.com </a>was featured in USA today on January 5, 2007. James and Coca-Cola’s Sprite plan to announce a national contect Friday inviting consumers to create theme songs for new Sprite TV commercials airing during NBA All-Star Weekend next month.  </p>
+		<div class="ml5 mb15 fc_h1 fs12 fwb dotArrow cp">  Show / Hide news item </div>
+		<p class="mb15 w375 fs12"> <strong> AKQA’s </strong> site for NBA superstar Lebron Spaß <a href="www.lebron23-23.com" target="_blank"> www.lebron23-23.com </a>was featured in USA today on January 5, 2007. James and Coca-Cola’s Sprite plan to announce a national contect Friday inviting consumers to create theme songs for new Sprite TV commercials airing during NBA All-Star Weekend next month.  </p>
 		<blockquote class="w320 mb22 fs12"> “I wanted to do something new and different. Sprite came to me with the idea. I thought it was cool. Without the fans, there’s no players.” </blockquote>
 		
 		<footer>
 			<h1 class="mb12 fs18"> More Information </h1>
-			<p class="mb12 w355 fs12"> For more information about the services AKQA offer and how we can work with you? please provide us with following items of information.</p>
+			<p class="mb12 w375 fs12"> For more information about the services AKQA offer and how we can work with you? please provide us with following items of information.</p>
 			
 			<form method="post" id="main_form" action="index.php" accept-charset="utf-8">
 			  <fieldset id="personal_information">
@@ -164,7 +164,6 @@
 			</form>
 		</footer>
 	</section>
-	<!--footer>	</footer-->
   </section>
 
   <!-- JavaScript -->

@@ -1,6 +1,13 @@
+@charset "windows-1251";
 body {background-color:black; }
 blockquote {margin-left:35px; /*text-indent:35px;*/} 
 a { color:#FFF000; font-style:italic;}
+strong{ font-weight:bolder; }
+input[type="email"], input[type="number"], input[type="password"], input[type="text"], input[type="url"] {
+	border-style:groove solid none groove;
+	border-width:2px 1px 1px 2px;
+	border-color:lightgrey #323131 grey grey;
+}
 
 .fc { color:white; }
 .fc_h1 { color:#E91A57; }
@@ -14,20 +21,24 @@ a { color:#FFF000; font-style:italic;}
 .fs11 { font-size:11px; }
 
 /*
-.fs24 { font-size:24pt; }
-.fs20 { font-size:20pt; }
-.fs18 { font-size:18pt; }
-.fs14 { font-size:14pt; }
-.fs12 { font-size:12pt; }
+	.fs24 { font-size:24pt; }
+	.fs20 { font-size:20pt; }
+	.fs18 { font-size:18pt; }
+	.fs14 { font-size:14pt; }
+	.fs12 { font-size:12pt; }
  */
 
 .w540 { width: 540px; }
+.w375 { width: 375px; }
 .w355 { width: 355px; }
 .w320 { width: 320px; }
 .w235 { width: 235px; }
 
+.pb155 { padding-bottom: 155px; }
+
 .h55 { height: 55px; }
 
+.mb70 {margin-bottom:70px }
 .mb35 {margin-bottom:35px }
 .mb22 {margin-bottom:22px }
 .mb17 {margin-bottom:17px }
@@ -38,7 +49,35 @@ a { color:#FFF000; font-style:italic;}
 .mt17 {margin-top:17px }
 .mt10 {margin-top:10px }
 
+.ml12 {margin-left:12px }
+.ml5 {margin-left:5px }
 
-#page {	background:url(../images/bg.jpg) 0px 0px no-repeat; padding-left:35px;}
+
+#page {	
+	background:url(../images/bg.jpg) 0px 0px no-repeat; 
+	background-size:100% 100%;
+	padding-left:35px;
+}
 #logo { background:url(../images/logo.png) 0px 0px no-repeat;  } 
+#main_nav a { 
+	background:url(../images/menu_bg.jpg) 0px 0px repeat-x;  
+	font-size:11px; 
+	color:white;
+	font-style:normal;
+	padding: 2px 17px 3px;
+	display: inline-block;
+	border-style:groove solid none groove;
+	border-width:2px 1px 0px 2px;
+	border-color:lightgrey #323131 red grey;
+	float: left;
+}
 #main_form input{margin: 5px 0px;}
+
+.dotList li{ 
+	list-style-type: disc; 
+	margin-bottom:3px;
+}
+.dotArrow{
+	background:url(../images/red_dot_arrow.png) 0px 0px no-repeat;
+	padding-left: 16px; 
+}
