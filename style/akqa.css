@@ -54,6 +54,7 @@ input[type="email"], input[type="number"], input[type="password"], input[type="t
 .ml12 {margin-left:12px }
 .ml5 {margin-left:5px }
 
+.pt10{padding-top:10px}
 
 #page {	
 	background:url(../images/bg.jpg) 0px 0px no-repeat; 
@@ -82,4 +83,10 @@ input[type="email"], input[type="number"], input[type="password"], input[type="t
 .dotArrow{
 	background:url(../images/red_dot_arrow.png) 0px 0px no-repeat;
 	padding-left: 16px; 
+}
+
+.brr {
+	border-style:solid;
+	border-width:2px;
+	border-color:red;
 }
