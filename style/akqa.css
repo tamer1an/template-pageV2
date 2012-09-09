@@ -1,6 +1,6 @@
 @charset "windows-1251";
-body {background-color:black; }
-blockquote {margin-left:35px; /*text-indent:35px;*/} 
+body {background-color:black;}
+blockquote {margin-left:35px; letter-spacing:0.09px;} /*text-indent:35px;*/
 a { color:#FFF000; font-style:italic;}
 strong{ font-weight:bolder; }
 input[type="email"], input[type="number"], input[type="password"], input[type="text"], input[type="url"] {
@@ -40,10 +40,12 @@ input[type="email"], input[type="number"], input[type="password"], input[type="t
 
 .mb70 {margin-bottom:70px }
 .mb35 {margin-bottom:35px }
+.mb27 {margin-bottom:27px }
 .mb22 {margin-bottom:22px }
 .mb17 {margin-bottom:17px }
 .mb15 {margin-bottom:15px }
 .mb12 {margin-bottom:12px }
+.mb10 {margin-bottom:10px }
 
 .mt22 {margin-top:22px }
 .mt17 {margin-top:17px }

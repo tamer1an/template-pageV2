@@ -30,11 +30,13 @@
 	
 	// <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 	// <html xmlns="http://www.w3.org/1999/xhtml" itemscope itemtype="http://schema.org/Review" dir="ltr" lang="en-US">
+
+	//<!-- rel='permalink'  rel="alternate"  rel="canonical" -->
 ?>
 
 <!DOCTYPE html>
 <html lang="en" manifest="offline/akqa.manifest">
-<head> <!-- rel='permalink'  rel="alternate"  rel="canonical" -->
+<head> 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title><?=TITLE?></title>
@@ -52,12 +54,12 @@
   <meta property="og:site_name"   	content="<?=SITE_NAME?>"/>
   
   <!-- DEVICE CONFIG -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.6, user-scalable=yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.9, user-scalable=yes" />
   <meta name="apple-mobile-web-app-capable" 			content="yes" /> <!-- full screen -->
   <meta name="apple-mobile-web-app-status-bar-style" 	content="black-translucent"> <!-- clock bar color -->
   <!--meta name="format-detection" content="telephone=no"--> 
   
-  <!-- ICONS <base href="http://www.w3schools.com/images/" target="_blank" /> --> 
+  <!-- ICONS <base href="http://images/" target="_blank" /> --> 
   <link href='favicon.ico' rel='icon' type='image/x-icon'/>
   <link rel="apple-touch-startup-image" href="load_screen.png" /> 
   <link rel="apple-touch-icon" sizes="72x72" href="touch-icon-ipad.png" />
@@ -92,24 +94,40 @@
   
 	<section class="wwbr cl f">
 		<header class="mb17 fc_h1 fs24"> About AKQA </header>
-		<h1 class="mb17 fs18"> What We Do </h1>
-		<p class="mb17 w375 fs12"> <strong>AKQA’s</strong> e-commerce solutions are inspired by the innovative application of technology. We integrate with CRM systems and databases to provide a seamless customer experience. <strong>AKQA</strong> manages technology projects using structured development processes and our QA team ensures that the final implementation is delivered to the highest quality standards. We also provide clients with a high-quality, ISO 9000-certified, managed hosting service. </p>
-		<h3 class="mb17 fs14 fc_h3 fwb"> Our focus </h3>
-		<ul class="ml12 mb22 dotList fs12"> 
-			<li> Interactive</li>
-			<li> Mobile 	</li>
-			<li> Technology </li>
-		</ul>
-		<a href="#" class="fftimes"> Click here to download a PDF of our recent work </a> 
 		
-		<h1 class="mt22 mb15 fs18"> News </h1>
-		<div class="ml5 mb15 fc_h1 fs12 fwb dotArrow cp">  Show / Hide news item </div>
-		<p class="mb15 w375 fs12"> <strong> AKQA’s </strong> site for NBA superstar Lebron Spaß <a href="www.lebron23-23.com" target="_blank"> www.lebron23-23.com </a>was featured in USA today on January 5, 2007. James and Coca-Cola’s Sprite plan to announce a national contect Friday inviting consumers to create theme songs for new Sprite TV commercials airing during NBA All-Star Weekend next month.  </p>
-		<blockquote class="w320 mb22 fs12"> “I wanted to do something new and different. Sprite came to me with the idea. I thought it was cool. Without the fans, there’s no players.” </blockquote>
+		<section>
+			<header class="mb17 fs18"> What We Do </header>
+			<p class="mb17 w375 fs12"> <strong>AKQA’s</strong> e-commerce solutions are inspired by the innovative application of technology. We integrate with CRM systems and databases to provide a seamless customer experience. <strong>AKQA</strong> manages technology projects using structured development processes and our QA team ensures that the final implementation is delivered to the highest quality standards. We also provide clients with a high-quality, ISO 9000-certified, managed hosting service. </p>
+			<h3 class="mb10 fs14 fc_h3 fwb"> Our focus </h3>
+			<ul class="ml12 mb22 dotList fs12"> 
+				<li> Interactive</li>
+				<li> Mobile 	</li>
+				<li> Technology </li>
+			</ul>
+			<a href="#" class="fs12"> Click here to download a PDF of our recent work </a> 
+			
+			<h1 class="mt22 mb15 fs18"> News </h1>
+			<div class="ml5 mb15 fc_h1 fs12 fwb dotArrow cp">  Show / Hide news item </div>
+			<p class="mb15 w375 fs12"> <strong> AKQA’s </strong> site for NBA superstar Lebron Spaß <a href="www.lebron23-23.com" target="_blank"> www.lebron23-23.com </a>was featured in USA today on January 5, 2007. James and Coca-Cola’s Sprite plan to announce a national contect Friday inviting consumers to create theme songs for new Sprite TV commercials airing during NBA All-Star Weekend next month.  </p>
+			<blockquote class="w320 mb27 fs12"> “I wanted to do something new and different. Sprite came to me with the idea. I thought it was cool. Without the fans, there’s no players.” </blockquote>
+		</section>
 		
 		<footer>
 			<h1 class="mb12 fs18"> More Information </h1>
 			<p class="mb12 w375 fs12"> For more information about the services AKQA offer and how we can work with you? please provide us with following items of information.</p>
+			
+			<!-- Additional possible fields
+							Date
+								<label class="" for="date">Date of birth</label>
+								<input pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d" required="required" placeholder="Required (DD.MM.YYYY)" id="date" class="" title="Required (DD.MM.YYYY)" name="date" type="date"/> 
+							Comments
+								<label class="" title="English only" for="comments">Comments</label> 
+								<textarea placeholder="English only" name="comment" title="English only"  id="comment" class=""></textarea>				
+							Subscribe
+								<label class="fw120-450" for="weekly" title="Subscribe for updates">Send updates on </label> 
+								<input checked value="2" title="Subscribe for monthly updates" id="monthly" class="fi mr5" name="senddate" type="radio" /> 
+								<input title="Subscribe for weekly updates" value="1" id="weekly" class="f mr5" name="senddate" type="radio" /> 
+					-->
 			
 			<form method="post" id="main_form" action="index.php" accept-charset="utf-8">
 			  <fieldset id="personal_information">
@@ -133,33 +151,7 @@
 							<input id="contact-submit" name="submit_form" class="cp send_button" value="Submit" type="submit"/> 
 						</div>
 					</li>
-					
-					<!-- Additional possible fields
-						<li>
-							<label class="" for="date">Date of birth</label>
-							<input pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d" required="required" placeholder="Required (DD.MM.YYYY)" id="date" class="" title="Required (DD.MM.YYYY)" name="date" type="date"/> 
-						</li>
-						<li class="">
-							<label class="" title="English only" for="comments">Comments</label> 
-							<textarea placeholder="English only" name="comment" title="English only"  id="comment" class=""></textarea>				
-						</li>
-						<li class="f w100pc mt15">
-							<label class="fw120-450" for="weekly" title="Subscribe for updates">Send updates on </label> 
-							<div class="r fw269-450 mr15"> 
-								<div class="f"> 
-									<div class="r mr15 block"> 
-										<input checked value="2" title="Subscribe for monthly updates" id="monthly" class="fi mr5" name="senddate" type="radio" /> 
-										<span class="f ml5"> monthly basis </span> 
-									</div>
-									<div class="r mr15 block  mw100">
-										<input title="Subscribe for weekly updates" value="1" id="weekly" class="f mr5" name="senddate" type="radio" /> 
-										<span class="f ml5"> weekly basis </span> 
-									</div>
-								</div>
-							</div>
-						</li>
-					-->
-				</ul>
+				</ul>	
 			  </fieldset>
 			</form>
 		</footer>
