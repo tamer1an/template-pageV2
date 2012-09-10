@@ -51,7 +51,7 @@ input[type="email"], input[type="number"], input[type="password"], input[type="t
 .mt17 {margin-top:17px }
 .mt10 {margin-top:10px }
 
-.ml12 {margin-left:12px }
+.ml14 {margin-left:14px }
 .ml5 {margin-left:5px }
 
 .pt10{padding-top:10px}
@@ -85,8 +85,6 @@ input[type="email"], input[type="number"], input[type="password"], input[type="t
 	padding-left: 16px; 
 }
 
-.brr {
-	border-style:solid;
-	border-width:2px;
-	border-color:red;
+.bgr {
+	background-color:#ffd7d7;
 }

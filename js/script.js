@@ -1,4 +1,4 @@
-var name,date,email,comment;
+var name,email;
 
 function elemHasAttribute(elementName,attribute){
 	var element = document.createElement(elementName);
@@ -8,7 +8,7 @@ function elemHasAttribute(elementName,attribute){
 function checkEmail() {
 	var email = document.getElementById('email');
 	var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-	if (!filter.test(email.value)) {
+	if (!filter.test(email.value) || $.trim(email.value) == 'yourmail@domain.com') {
 		email.focus;
 		return false;
 	} else {
@@ -18,15 +18,6 @@ function checkEmail() {
 
 $(function(){ //// page run
 	$('noscript').remove();
-
-	if(!elemHasAttribute('input','required'))
-	$("#contact-submit").click(function(e){
-		e.preventDefault();
-	});
-	
-		//if ($.mask)
-		//$("#phone").mask("+99 (999) 999-99-99");
-		//$("#date").mask("99.99.9999");
 	
 	if(!elemHasAttribute('input','placeholder'))
 		$("#main_form").placeholder();
@@ -34,69 +25,47 @@ $(function(){ //// page run
 	if(!elemHasAttribute('input','autofocus'))
 		$('input[autofocus=true]' ).focus();
 	
-	$('#name,#email').bind('change keyup',function(e){ //,#comment,#date,
+	if(!elemHasAttribute('input','required'))
+		$("#contact-submit").click(function(e){
+			e.preventDefault();
+			
+			var bool = 	$.trim($('#name').val())!= '' 
+			&& $.trim($('#email').val())!= ''
+			&& checkEmail()
+			&& $.trim($('#name').val())!='at least 2 letters';
+			
+			if(bool){
+				// alert('Validation passed');
+			} else {
+				alert('Please fill required fields');
+			}
+		});
+	
+	$('#name,#email,#phone').bind('change keyup',function(e){ //,#comment,#date,
 		switch(e.target.id){
 			case 'name':
-				if($.trim(this.value)=='')
-					$(this).addClass('brr');
+				var trimName = $.trim(this.value);
+				if(trimName=='' || trimName.length<2 || trimName=='at least 2 letters')
+					$(this).addClass('bgr');
 				else
-					$(this).removeClass('brr');
+					$(this).removeClass('bgr');
 			break;
 			case 'email':
 				if($.trim(this.value)==''||!checkEmail())
-					$(this).addClass('brr');
+					$(this).addClass('bgr');
 				else
-					$(this).removeClass('brr');
+					$(this).removeClass('bgr');
 			break;
-		}
-			
-		/*
-			case 'date':
-				if(!/^(\d{1,2}).(\d{1,2}).(\d{4})$/.test($(this).val()))
-					$(this).addClass('brr');
-				else if (/^(\d{1,2}).(\d{1,2}).(\d{4})$/.test($(this).val()))
-					$(this).removeClass('brr');
+			case 'phone':
+				if(!(parseInt(this.value[this.value.length-1])>=0 && this.value.length <= 11))
+					this.value = this.value.substr(0,this.value.length-1);
 			break;
-				
-			if(e.target.id == 'comment'){
-				if(/[^a-z\s]+/gi.test($('#comment').val()))
-					$(this).addClass('brr');
-				else if (!/[^a-z\s]+/gi.test($('#comment').val()))
-					$(this).removeClass('brr');
-			}
-		*/
-	
-		var bool = 	$.trim($('#name').val())!= '' 
-					&& $.trim($('#email').val())!= ''
-					&&checkEmail()
-					// && $.trim($('#date').val())!=''
-					// &&!/[^a-z\s]+/gi.test($('#comment').val())
-					// &&/^(\d{1,2}).(\d{1,2}).(\d{4})$/.test($('#date').val());
-		
-		if(!$("#contact-submit").hasClass('send_button_active')&&bool){
-			$("#contact-submit").toggleClass('send_button send_button_active');
-			var options = {
-				url: 'index.php',
-				success: function(response) {
-					// var data = $.parseJSON(response);
-					// if(data.result == true)
-				}
-			};
-			$("#contact-submit").unbind().click(function(e){
-				e.preventDefault();
-				if ($.trim($('#comment').val())==='English only')
-					$('#comment').val(' ');
-				$("#main_form").ajaxSubmit(options);
-				alert('form has been submited');
-			});	
-		}else if($("#contact-submit").hasClass('send_button_active')&&!bool){
-			$("#contact-submit").unbind().click(function(e){
-				e.preventDefault();
-			}).toggleClass('send_button send_button_active');
 		}
 	});
 });		
 
+
+// UTIL FUNCTIONS
 //Include js files function
 function include(file,scriptStack) {
 	var script = document.createElement('script');
@@ -131,16 +100,14 @@ function includeWithCallBack(file, callback) {
 	};
 };
 
-// Placeholders compatability with IE
+// Placeholders
 (function($){  
   $.fn.placeholder = function(){   
     function valueIsPlaceholder(input){
       return ($(input).val() == $(input).attr("placeholder"));
     }
     return this.each(function() {  
-  
       $(this).find(":input").each(function(){
-      
         if($(this).attr("type") == "password"){ 
           
           var new_field = $("<input type='text'>");
@@ -161,45 +128,29 @@ function includeWithCallBack(file, callback) {
             $('input#' + $(this).attr("rel")).show().focus();
           });
 
-          $(this).blur(function(){
-             showPasswordPlaceHolder(this);
-          });
-
+          $(this).blur(function(){ showPasswordPlaceHolder(this);  });
           showPasswordPlaceHolder(this); 
         
         }else{
-          
-          // Replace the value with the placeholder text. 
-          // optional reload parameter solves FF and
-          // IE caching values on fields.
-          function showPlaceholder(input, reload){
+   		  function showPlaceholder(input, reload){
             if( $(input).val() == "" || 
-              ( reload && valueIsPlaceholder(input) ) ){ 
+              ( reload && valueIsPlaceholder(input) ) ) 
                 $(input).val($(input).attr("placeholder"));
-              }
           };
           
           $(this).focus(function(){
-            if($(this).val() == $(this).attr("placeholder")){
-              $(this).val("");
-            };
+			if($(this).val() == $(this).attr("placeholder"))  $(this).val("");
           });
 
-          $(this).blur(function(){
-             showPlaceholder($(this), false)
-          });
-          
+          $(this).blur(function(){ showPlaceholder($(this), false) });
           showPlaceholder(this, true); 
         };
       });
-      
-      // Prevent forms from submitting default values
-      $(this).submit(function(){  
 	  
+      $(this).submit(function(){  
         $(this).find(":input").each(function(){
-          if($(this).val() == $(this).attr("placeholder")){
+          if($(this).val() == $(this).attr("placeholder"))
             $(this).val("");
-          }          
         });
       });
       

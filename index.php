@@ -1,4 +1,4 @@
-﻿<?php //CONSTANTS
+<?php //CONSTANTS
 	// "Server details"
 	define ('NAME',$_SERVER['SERVER_NAME']  );
 	define ('ADDR',$_SERVER['SERVER_ADDR']  );
@@ -21,7 +21,6 @@
 		define ('JQCDN','//code.jquery.com/jquery-1.8.1.min.js');
 		// Development (Full) version
 		// http://code.jquery.com/jquery-1.8.1.js 	
-
 		
 	// SOCIAl & SEO DATA
 	define ('DESC',"AKQA’s e-commerce solutions are inspired by the innovative application of technology. We integrate with CRM systems and databases to provide a seamless customer experience. AKQA manages technology projects using structured development processes and our QA team ensures that the final implementation is delivered to the highest quality standards. We also provide clients with a high-quality, ISO 9000-certified, managed hosting service.");
@@ -31,15 +30,13 @@
 	
 	// <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 	// <html xmlns="http://www.w3.org/1999/xhtml" itemscope itemtype="http://schema.org/Review" dir="ltr" lang="en-US">
-
-	//<!-- rel='permalink'  rel="alternate"  rel="canonical" -->
 ?>
 
 <!DOCTYPE html>
-<html lang="en" manifest="offline/akqa.manifest">
+<html lang="en" manifest="offline/akqa.manifest" itemscope itemtype="http://schema.org/Organization">
 <head> 
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="author" content="Developed by Trybynenko Andrii">
   <meta name="application-name" content="<?=SITE_NAME?>"/>
   <title><?=TITLE?></title>
@@ -80,7 +77,7 @@
   <!-- CSS for printing page-->
   <link  href="<?=CSS?>print.css" 		rel="stylesheet" type="text/css" media="print"> 
  		
-  <!-- modernizr 2.6.2 custom build --> 
+  <!-- modernizr 2.6.2 or html5shiv(tag enabler) <script src="js/lib/html5shiv.js"></script> --> 
   <script src="<?=JS?>modernizr.js"></script>
 </head>
 
@@ -95,14 +92,14 @@
 		</nav> 
 	</header>
   
-	<section itemscope itemtype="http://schema.org/Organization" class="wwbr cl f" data-role="content">
+	<section class="wwbr cl f" data-role="content">
 		<header class="mb17 fc_h1 fs24"> About AKQA </header>
 		
 		<section>
 			<header class="mb17 fs18"> What We Do </header>
 			<p itemprop="description" class="mb17 w375 fs12"> <strong>AKQA’s</strong> e-commerce solutions are inspired by the innovative application of technology. We integrate with CRM systems and databases to provide a seamless customer experience. <strong itemprop="name">AKQA</strong> manages technology projects using structured development processes and our QA team ensures that the final implementation is delivered to the highest quality standards. We also provide clients with a high-quality, ISO 9000-certified, managed hosting service. </p>
 			<h3 class="mb10 fs14 fc_h3 fwb"> Our focus </h3>
-			<ul  class="ml12 mb22 dotList fs12" itemprop="reviews"> 
+			<ul  class="ml14 mb22 dotList fs12" itemprop="reviews"> 
 				<li itemprop="review"> Interactive</li>
 				<li itemprop="review"> Mobile 	</li>
 				<li itemprop="review"> Technology </li>
@@ -118,36 +115,21 @@
 		<footer>
 			<h1 class="mb12 fs18"> More Information </h1>
 			<p class="mb12 w375 fs12"> For more information about the services AKQA offer and how we can work with you? please provide us with following items of information.</p>
-			
-				<!-- Additional possible fields
-						Date
-							<label class="" for="date">Date of birth</label>
-							<input pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d" required="required" placeholder="Required (DD.MM.YYYY)" id="date" class="" title="Required (DD.MM.YYYY)" name="date" type="date"/> 
-						Comments
-							<label class="" title="English only" for="comments">Comments</label> 
-							<textarea placeholder="English only" name="comment" title="English only"  id="comment" class=""></textarea>				
-						Subscribe
-							<label class="fw120-450" for="weekly" title="Subscribe for updates">Send updates on </label> 
-							<input checked value="2" title="Subscribe for monthly updates" id="monthly" class="fi mr5" name="senddate" type="radio" /> 
-							<input title="Subscribe for weekly updates" value="1" id="weekly" class="f mr5" name="senddate" type="radio" /> 
-					-->
-			
 			<form method="post" id="main_form" action="index.php" accept-charset="utf-8">
 			  <fieldset id="personal_information">
 				<legend class="fs11 mb17">Items marked * are required fields </legend>
 				<ul class="main_form mt3 fs12">                                                                                             
 					<li class="">	 
 						<label class="f cl" for="name">Contact name*:</label> 
-						<!-- check border style from source input psd -->
-						<input id="name" class="f cl" required="required" autofocus="true" placeholder="Required" title="Required" name="name" type="text"/>
+						<input id="name" class="f cl" required="required" autofocus placeholder="at least 2 letters" title="Required" name="name" type="text"/>
 					</li>
 					<li class="">
 						<label class="f cl" for="email">Contact email address*:</label> 
-						<input id="email" class="f cl w235" required="required" placeholder="Required" title="Required" type="email" name="email"/>      
+						<input id="email" class="f cl w235" required="required" placeholder="yourmail@domain.com" title="Required" type="email" name="email"/>      
 					</li>
 					<li class="">
-						<label class="f cl" title="+55 (555) 555-55-55" for="phone">Contact phone number:</label> 
-						<input id="phone" class="f cl w235" placeholder="+55 (555) 555-55-55" name="phone" title="+55 (555) 555-55-55"  type="text" />      
+						<label class="f cl" title="Full number(only digits)" for="phone">Contact phone number:</label> 
+						<input id="phone" class="f cl w235" placeholder="Full number(only digits)" name="phone" title="Full number(only digits)"  type="text" />      
 					</li>
 					<li class="f cl">
 						<div class="">
