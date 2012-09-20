@@ -30,6 +30,15 @@
 	
 	// <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 	// <html xmlns="http://www.w3.org/1999/xhtml" itemscope itemtype="http://schema.org/Review" dir="ltr" lang="en-US">
+	
+// class GetRemoteContent {
+
+   // function __construct($url) {
+       	// $page = file_get_contents($url);
+		// // $page;
+   // }
+   
+// }
 ?>
 
 <!DOCTYPE html>
@@ -93,11 +102,11 @@
 	</header>
   
 	<section class="wwbr cl f" data-role="content">
-		<header class="mb17 fc_h1 fs24"> About AKQA </header>
+		<header class="mb17 fc_h1 fs24">Template brand’s</header>
 		
 		<section>
 			<header class="mb17 fs18"> What We Do </header>
-			<p itemprop="description" class="mb17 w375 fs12"> <strong>AKQA’s</strong> e-commerce solutions are inspired by the innovative application of technology. We integrate with CRM systems and databases to provide a seamless customer experience. <strong itemprop="name">AKQA</strong> manages technology projects using structured development processes and our QA team ensures that the final implementation is delivered to the highest quality standards. We also provide clients with a high-quality, ISO 9000-certified, managed hosting service. </p>
+			<p itemprop="description" class="mb17 w375 fs12"> <strong>Template brand’s</strong> e-commerce </p>
 			<h3 class="mb10 fs14 fc_h3 fwb"> Our focus </h3>
 			<ul  class="ml14 mb22 dotList fs12" itemprop="reviews"> 
 				<li itemprop="review"> Interactive</li>
@@ -110,11 +119,16 @@
 			<div class="ml5 mb15 fc_h1 fs12 fwb dotArrow cp">  Show / Hide news item </div>
 			<p itemprop="description" class="mb15 w375 fs12"> <strong> AKQA’s </strong> site for NBA superstar Lebron Spaß <a itemprop="url" href="www.lebron23-23.com" target="_blank"> www.lebron23-23.com </a>was featured in USA today on January 5, 2007. James and Coca-Cola’s Sprite plan to announce a national contect Friday inviting consumers to create theme songs for new Sprite TV commercials airing during NBA All-Star Weekend next month.  </p>
 			<blockquote class="w320 mb27 fs12"> “I wanted to do something new and different. Sprite came to me with the idea. I thought it was cool. Without the fans, there’s no players.” </blockquote>
-		</section>
+	
+
+		<? 			//   $code = new GetRemoteContent('http://www.playboy.com/gallery/search');		?>
+
+
+	</section>
 		
 		<footer>
 			<h1 class="mb12 fs18"> More Information </h1>
-			<p class="mb12 w375 fs12"> For more information about the services AKQA offer and how we can work with you? please provide us with following items of information.</p>
+			<p class="mb12 w375 fs12"> information.</p>
 			<form method="post" id="main_form" action="index.php" accept-charset="utf-8">
 			  <fieldset id="personal_information">
 				<legend class="fs11 mb17">Items marked * are required fields </legend>
