@@ -20,14 +20,6 @@ input[type="email"], input[type="number"], input[type="password"], input[type="t
 .fs12 { font-size:12px; }
 .fs11 { font-size:11px; }
 
-/*
-	.fs24 { font-size:24pt; }
-	.fs20 { font-size:20pt; }
-	.fs18 { font-size:18pt; }
-	.fs14 { font-size:14pt; }
-	.fs12 { font-size:12pt; }
- */
-
 .w540 { width: 540px; }
 .w375 { width: 375px; }
 .w355 { width: 355px; }
@@ -56,6 +48,8 @@ input[type="email"], input[type="number"], input[type="password"], input[type="t
 
 .pt10{padding-top:10px}
 
+
+/* ALTERNATIVE can be used images/main_sprite.png */
 #page {	
 	background:url(../images/bg.jpg) 0px 0px no-repeat; 
 	background-size:100% 100%;
@@ -63,7 +57,7 @@ input[type="email"], input[type="number"], input[type="password"], input[type="t
 }
 #logo { background:url(../images/logo.png) 0px 0px no-repeat;  } 
 #main_nav a { 
-	background:url(../images/menu_bg.jpg) 0px 0px repeat-x;  
+	background:url(../images/menu_bg.png) 0px 0px repeat-x;  
 	font-size:11px; 
 	color:white;
 	font-style:normal;

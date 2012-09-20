@@ -6,7 +6,7 @@
 	define ('RQ_URL',$_SERVER['REQUEST_URI']);
 
 	// ==== INSURE FOR CORRECT PATH HERE ====
-	define('SYS_URL','http://'.NAME.'/template-pageV2/');
+	define('SYS_URL','http://'.NAME.'/');
 
 	// "IMG"
 	define('IMG',SYS_URL.'images/');
@@ -23,17 +23,17 @@
 		// http://code.jquery.com/jquery-1.8.1.js 	
 		
 	// SOCIAl & SEO DATA
-	define ('DESC',"AKQA’s e-commerce solutions are inspired by the innovative application of technology. We integrate with CRM systems and databases to provide a seamless customer experience. AKQA manages technology projects using structured development processes and our QA team ensures that the final implementation is delivered to the highest quality standards. We also provide clients with a high-quality, ISO 9000-certified, managed hosting service.");
-	define ('SITE_NAME','AKQA'); 
-	define ('TITLE','About AKQA'); 
-	define ('TYPE','article'); 
+	define ('DESC',_("TEMPLATE1"));
+	define ('SITE_NAME',_("TEMPLATE2")); 
+	define ('TITLE',_("TEMPLATE3")); 
+	define ('TYPE',_("TEMPLATE4")); 
 	
 	// <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 	// <html xmlns="http://www.w3.org/1999/xhtml" itemscope itemtype="http://schema.org/Review" dir="ltr" lang="en-US">
 ?>
 
 <!DOCTYPE html>
-<html lang="en" manifest="offline/akqa.manifest" itemscope itemtype="http://schema.org/Organization">
+<html lang="en" manifest="offline/template.manifest" itemscope itemtype="http://schema.org/Organization">
 <head> 
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
